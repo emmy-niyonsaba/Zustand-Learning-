@@ -1,3 +1,5 @@
+import { redirect } from "react-router-dom";
+
 export const postAction = async ({ request }) => {
   if (request.method !== 'POST') {
     return { error: 'Invalid request method' };
@@ -17,6 +19,7 @@ export const postAction = async ({ request }) => {
     }
 
     return { success: true, post: postData };
+      redirect('/posts');
   } catch (error) {
     return { error: error.message };
   }
