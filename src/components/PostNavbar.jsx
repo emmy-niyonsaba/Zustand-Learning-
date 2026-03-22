@@ -5,9 +5,7 @@ function PostNavbar() {
   return (
     <div className='sticky top-0 z-40 bg-white border-b border-slate-200 shadow-sm'>
       <div className='px-6 py-4'>
-        {/* Main Navigation Bar */}
         <div className='flex items-center justify-between'>
-          {/* Title and Breadcrumb */}
           <div className='flex items-center gap-3'>
             <span className='text-2xl'>📝</span>
             <div>
@@ -16,7 +14,6 @@ function PostNavbar() {
             </div>
           </div>
 
-          {/* Navigation Links */}
           <div className='flex items-center gap-2 bg-slate-50 rounded-lg p-1 border border-slate-200'>
             <NavLink
               to=""
@@ -49,7 +46,6 @@ function PostNavbar() {
           </div>
         </div>
 
-        {/* Optional: Statistics Line */}
         <div className='mt-4 pt-4 border-t border-slate-100 flex items-center gap-6 text-sm text-slate-600'>
           <div className='flex items-center gap-2'>
             <span className='text-lg'>📊</span>
