@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-
+// 
 function PostNavbar() {
   return (
     <div className='sticky top-0 z-40 bg-white border-b border-slate-200 shadow-sm'>

@@ -9,6 +9,8 @@ import Posts from './components/Posts'
 import PostDetails from './components/PostDetails'
 import NewPost from './components/NewPost'
 import EditPost from './components/EditPost'
+import PersonData from './components/PersonalData'
+
 
 import { postAction } from './actions/posts'
 
@@ -18,6 +20,10 @@ function App() {
   return (
     <>
       <BrowserRouter>
+      <PersonData/>
+      {/* <DisplayUser user={{ id: 1, name: "Leanne Graham", email: "leanne@gmail.com" }} /> */}
+
+
   <Routes>
     <Route path="/" element={<AppLayout />}>
 
