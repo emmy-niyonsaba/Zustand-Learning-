@@ -7,7 +7,6 @@ function PostDetails() {
   const { id } = useParams()
 
   const currentPost = post(Number(id))
-
   // ❌ If post not found
   if (!currentPost) {
     return (
