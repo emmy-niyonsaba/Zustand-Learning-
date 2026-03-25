@@ -1,6 +1,6 @@
 
 import './App.css'
-import { BrowserRouter,Route,Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import AppLayout from './components/layouts/AppLayout'
 import PostsLayout from './components/layouts/PostsLayout'
 import Home from './components/Home'
@@ -9,6 +9,8 @@ import Posts from './components/Posts'
 import PostDetails from './components/PostDetails'
 import NewPost from './components/NewPost'
 import EditPost from './components/EditPost'
+import Users from './components/user/Users'
+import UserDetails from './components/user/UserDetails'
 
 
 import { postAction } from './actions/posts'
@@ -19,24 +21,29 @@ function App() {
   return (
     <>
       <BrowserRouter>
-      
 
-  <Routes>
-    <Route path="/" element={<AppLayout />}>
 
-      <Route index element={<Home />} />
-      <Route path="about" element={<About />} />
+        <Routes>
+          <Route path="/" element={<AppLayout />}>
 
-     <Route path="posts" element={<PostsLayout />} >
-        <Route index element={<Posts />} />
-      <Route path=":id" element={<PostDetails />} />
-      <Route path="new" element={<NewPost />} action={postAction} />
-      <Route path="edit/:id" element={<EditPost />} />
-     </Route>
-    </Route>
-  </Routes>
+            <Route index element={<Home />} />
+            <Route path="about" element={<About />} />
 
-</BrowserRouter>
+            <Route path="posts" element={<PostsLayout />} >
+              <Route index element={<Posts />} />
+              <Route path=":id" element={<PostDetails />} />
+              <Route path="new" element={<NewPost />} action={postAction} />
+              <Route path="edit/:id" element={<EditPost />} />
+            </Route>
+            <Route path='users'>
+              <Route index element={<Users/>}></Route>
+              <Route path=':id' element={<UserDetails/>}></Route>
+
+            </Route>
+          </Route>
+        </Routes>
+
+      </BrowserRouter>
     </>
   )
 }
