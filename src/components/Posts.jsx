@@ -18,7 +18,6 @@ const Posts = () => {
   useEffect(() => {
     fetchPosts()
   }, [])
-
   const handleSearch = (e) => {
     const searchTerm = e.target.value.trim()
     if (searchTerm.trim() === '') {
