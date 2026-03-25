@@ -8,6 +8,7 @@ const Sibar = () => {
   const navItems = [
     { path: '/', label: 'Home', icon: '🏠' },
     { path: '/about', label: 'About', icon: 'ℹ️' },
+    { path: '/users', label: 'Users', icon: 'ℹ️' },
     { path: '/posts', label: 'Posts', icon: '📝' },
   ]
 
